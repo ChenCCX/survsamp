@@ -1,0 +1,2 @@
+# survsamp
+This package offers several functions for performing estimation and sample size determination from Survey data. The sampling methods available include: simple, stratified, systematic, and cluster. The statistics for estimation include: mean, total, proportion, difference, and ratio. One of the functions also offers estimation of the population size using direct, inverse, or quadratic sampling methods. Variance estimated and confidence intervals are generated for all.
