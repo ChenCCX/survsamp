@@ -264,7 +264,7 @@ survsamp.strat=function(y=NULL,B=NULL,N=NULL,n=NULL,
 
       if (estimate=="mean"){
         if (sample.size.det){
-          D=B^2/(2*qnorm(1-alpha/2))
+          D=B^2/(2*2)
 #          sig2=ifelse(rep(is.null(sig2),length(sig2)),si2,sig2)
           if (is.null(ss.det.a)==FALSE){#given a
             ai=ss.det.a
@@ -465,7 +465,7 @@ survsamp.diff=function(y1=NULL,y2=NULL,N1=NULL,N2=NULL,
                            "d:","vhatybard:","B:","ci:"),
                   Value=c(estimate,alpha,N1,N2,n1,n2,FPC,d,
                           varybard,B,ci))
-  } else
+  } elsesurvsamp.strat
     if (estimate=="proportion"){
       pdhat=phat1-phat2
       varpdhat=phat1*(1-phat1)/n1+phat2*(1-phat2)/n2+
