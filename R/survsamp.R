@@ -469,7 +469,8 @@ survsamp.diff=function(y1=NULL,y2=NULL,N1=NULL,N2=NULL,
       pdhat=phat1-phat2
       varpdhat=phat1*(1-phat1)/n1+phat2*(1-phat2)/n2+
         ifelse(prop.dpnt,2*phat1*phat2/(n1),0)
-      B=qnorm(1-alpha/2)*sqrt(varpdhat)
+      #B=qnorm(1-alpha/2)*sqrt(varpdhat)
+      B=2*sqrt(varpdhat)
       ci=paste("(",round(pdhat-B,5),",",round(pdhat+B,5),")",sep="")
       df=data.frame(Object=c("Estimate:","alpha:","n1:","n2:",
                              "pdhat:","vhatpdhat:","B:","ci:"),
