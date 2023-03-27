@@ -280,7 +280,9 @@ survsamp.strat=function(y=NULL,B=NULL,N=NULL,n=NULL,
           n=ifelse(is.null(budget),
                    ceiling((sum(Ni^2*sig2/ai))/(sum(Ni)^2*D+sum(Ni*sig2))),
                    floor(budget/sum(ss.det.cost*ai)))
-          ni=ifelse(rep(is.null(budget),length(ai)),ceiling(n*ai),round(n*ai))
+          #ni=ifelse(rep(is.null(budget),length(ai)),ceiling(n*ai),round(n*ai))
+          ni=ifelse(rep(is.null(budget),length(ai)),round(n*ai),round(n*ai))
+          
           n=sum(ni)
            df=data.frame(Object=c("Estimate:","alpha:","N:","n:","ni:",
                                  "sigma2:","B:","ai:","ci:","Budget:"),
