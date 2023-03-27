@@ -458,7 +458,8 @@ survsamp.diff=function(y1=NULL,y2=NULL,N1=NULL,N2=NULL,
                     ifelse(FPC,(N1-n1)/(N1-1),1)*sig2.1/n1)+
               ifelse(is.null(sig2.2),ifelse(FPC,(1-n2/N2),1)*s2.2/n2,
                      ifelse(FPC,(N2-n2)/(N2-1),1)*sig2.2/n2)
-    B=qt(1-alpha/2,min(n1-1,n2-1))*sqrt(varybard)
+    #B=qt(1-alpha/2,min(n1-1,n2-1))*sqrt(varybard)
+    B=2*sqrt(varybard)
     ci=paste("(",round(d-B,5),",",round(d+B,5),")",sep="")
     df=data.frame(Object=c("Estimate:","alpha:","N1:","N2:","n1:","n2:","FPC:",
                            "d:","vhatybard:","B:","ci:"),
