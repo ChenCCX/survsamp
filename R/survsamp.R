@@ -465,7 +465,7 @@ survsamp.diff=function(y1=NULL,y2=NULL,N1=NULL,N2=NULL,
                            "d:","vhatybard:","B:","ci:"),
                   Value=c(estimate,alpha,N1,N2,n1,n2,FPC,d,
                           varybard,B,ci))
-  } elsesurvsamp.strat
+  } else
     if (estimate=="proportion"){
       pdhat=phat1-phat2
       varpdhat=phat1*(1-phat1)/n1+phat2*(1-phat2)/n2+
